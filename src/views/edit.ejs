@@ -1,0 +1,26 @@
+<% include partials/_header %>
+
+<div class="container">
+  <div class="row">
+    <!--FORM-->
+    <div class="col-md-5 offset-md-3">
+      <div class="card">
+        <div class="card-body">
+          <form action="/edit/<%= person._id %>" method="post">
+            <div class="form-group">
+              <input class="form-control" type="text" name="dui" placeholder="DUI" value="<%= person.dui %>">
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="text" name="name" placeholder="Agregar nombre" value="<%= person.name %>">
+            </div>
+            <button class="btn btn-primary" type="submit">
+              Actualizar 
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% include partials/_footer%>
